@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolates Store</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .chocolates {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .chocolate-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 20px);
+        }
+        .cart {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chocolates Store</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Cart</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+        <div class="chocolates">
+            <!-- Add chocolate cards here -->
+            <div class="chocolate-card">
+                <h2>Dark Chocolate</h2>
+                <p>Rich and intense flavor.</p>
+                <button onclick="addToCart('Dark Chocolate', 5.99)">Add to Cart</button>
+            </div>
+            <div class="chocolate-card">
+                <h2>Milk Chocolate</h2>
+                <p>Smooth and creamy.</p>
+                <button onclick="addToCart('Milk Chocolate', 4.99)">Add to Cart</button>
+            </div>
+            <!-- Add more chocolates here -->
+        </div>
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <div class="cart-item">
+                <span>Dark Chocolate (1)</span>
+                <span>$5.99</span>
+            </div>
+            <!-- Add more cart items here -->
+            <p>Total: $5.99</p>
+        </div>
+    </div>
+    <footer>
+        © 2023 Chocolates Store. All rights reserved.
+    </footer>
+    <script>
+        // Add your JavaScript code here
+        let cartTotal = 0;
+
+        function addToCart(item, price) {
+            cartTotal += price;
+            alert(`Added ${item} to cart. Total: $${cartTotal.toFixed(2)}`);
+        }
+    </script>
+</body>
+</html>
